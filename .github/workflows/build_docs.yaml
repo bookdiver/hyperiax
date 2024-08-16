@@ -13,15 +13,14 @@ on:
 permissions:
   contents: write
   id-token: write
-  pages: write
 
 jobs:
   deploy-docs:
     name: build documentation and deploy to github pages
-    runs-on: ubuntu-20.04
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    # environment:
+    #   name: github-pages
+    #   url: ${{ steps.deployment.outputs.page_url }}
     permissions:
       pages: write
       id-token: write
